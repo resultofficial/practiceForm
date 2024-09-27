@@ -13,11 +13,6 @@ public class CalendarComponent {
     public static SelenideElement dayInput = $(".react-datepicker__week");
 
 
-//    public CalendarComponent setClick() {
-//        clickPole.click();
-//        return this;
-//    }
-
     public CalendarComponent setMonthYearDay (String month, String year, String day) {
         clickPole.click();
         monthInput.click();
@@ -36,12 +31,5 @@ public class CalendarComponent {
         dayInput.setValue(day);
         return this;
     }
-
-
-//        $("#dateOfBirthInput").click();
-//        $(".react-datepicker__month-select").click();
-//        $(".react-datepicker__month-select").selectOption("December");
-//        $(".react-datepicker__year-select").selectOption("1994");
-//        $(".react-datepicker__week").$(byText("3")).click();
 
 }
