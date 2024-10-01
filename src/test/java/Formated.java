@@ -4,14 +4,17 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class Form {
+import static tests.TestData.*;
+
+public class Formated {
+
+
 
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = false;
         Configuration.timeout = 5000; // default 4000
     }
 
@@ -21,16 +24,16 @@ public class Form {
     @Test
     void fillFormTest() {
         registrationPage.openPage("/automation-practice-form")
-                .setFirstNameInput("Nasty")
-                .setLastNameInput("Ermolaeva")
-                .setUserEmailInput("nasty@mail.com")
+                .setFirstNameInput(name)
+                .setLastNameInput(lastName)
+                .setUserEmailInput(userEmail)
                 .setClickButten()
-                .setUserNumberInput("89109117561");
-        calendarComponent.setMonthYearDay("December", "1994", "3");
-        registrationPage.setSubjectsInput("c")
-                .setHobbies("Music")
+                .setUserNumberInput(Number);
+        calendarComponent.setMonthYearDay(month, year, day);
+        registrationPage.setSubjectsInput(Subjects)
+                .setHobbies(hobbies)
                 .setuploadPicture()
-                .setAddress("молодец")
+                .setAddress(comment)
                 .setStatusAndCity()
                 .actionSumbit()
                 .closePhorm();
@@ -39,12 +42,12 @@ public class Form {
     @Test
     void minProverca() {
         //open("/automation-practice-form");
-        registrationPage.openPage("/automation-practice-form")
-                .setFirstNameInput("Nasty")
-                .setLastNameInput("Ermolaeva")
-                .setUserEmailInput("nasty@mail.com")
+        registrationPage.openPage(open)
+                .setFirstNameInput(name)
+                .setLastNameInput(lastName)
+                .setUserEmailInput(userEmail)
                 .setClickButten()
-                .setUserNumberInput("89109117561")
+                .setUserNumberInput(Number)
                 .actionSumbit()
                 .closePhorm();
     }
@@ -52,7 +55,7 @@ public class Form {
     @Test
     void negativProverca() {
         // open("/automation-practice-form");
-        registrationPage.openPage("/automation-practice-form")
+        registrationPage.openPage(open)
                 .setUserNumberInput("123456789")
                 .actionSumbit();
     }
