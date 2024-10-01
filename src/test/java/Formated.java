@@ -1,6 +1,7 @@
 import Page.RegistrationPage;
 import Page.components.CalendarComponent;
 import com.codeborne.selenide.Configuration;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -20,9 +21,18 @@ public class Formated {
 
     RegistrationPage registrationPage = new RegistrationPage();
     CalendarComponent calendarComponent = new CalendarComponent();
+//    Faker faker = new Faker();
+
+
 
     @Test
     void fillFormTest() {
+
+//        String name = faker.name().fullName();
+//        String lastName = faker.name().lastName();
+//        String userEmail = faker.internet().emailAddress();
+
+
         registrationPage.openPage("/automation-practice-form")
                 .setFirstNameInput(name)
                 .setLastNameInput(lastName)
