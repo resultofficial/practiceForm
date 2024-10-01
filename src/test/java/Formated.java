@@ -5,10 +5,11 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Locale;
+
 import static tests.TestData.*;
 
 public class Formated {
-
 
 
     @BeforeAll
@@ -21,14 +22,13 @@ public class Formated {
 
     RegistrationPage registrationPage = new RegistrationPage();
     CalendarComponent calendarComponent = new CalendarComponent();
-//    Faker faker = new Faker();
-
+//    Faker faker = new Faker(new Locale("ru"));
 
 
     @Test
     void fillFormTest() {
 
-//        String name = faker.name().fullName();
+//        String name = faker.name().name();
 //        String lastName = faker.name().lastName();
 //        String userEmail = faker.internet().emailAddress();
 
