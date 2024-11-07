@@ -1,29 +1,18 @@
+package tests;
+
 import Page.RegistrationPage;
 import Page.components.CalendarComponent;
-import com.codeborne.selenide.Configuration;
-import com.github.javafaker.Faker;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Locale;
 
 import static tests.TestData.*;
 
-public class Formated {
+public class Formated extends BaseTest {
 
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 5000; // default 4000
-    }
 
     RegistrationPage registrationPage = new RegistrationPage();
     CalendarComponent calendarComponent = new CalendarComponent();
 //    Faker faker = new Faker(new Locale("ru"));
-
 
     @Test
     void fillFormTest() {
