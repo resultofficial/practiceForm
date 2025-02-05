@@ -1,6 +1,7 @@
 package Page.components;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -12,7 +13,7 @@ public class CalendarComponent {
     public static SelenideElement yearInput = $(".react-datepicker__year-select");
     public static SelenideElement dayInput = $(".react-datepicker__week");
 
-
+    @Step("Добавить дату дня рождения")
     public CalendarComponent setMonthYearDay (String month, String year, String day) {
         clickPole.click();
         monthInput.click();
