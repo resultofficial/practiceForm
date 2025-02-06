@@ -8,11 +8,11 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
-
 import static tests.TestData.*;
 
+@Tag("anketa")
 public class Formated extends BaseTest {
 
 
