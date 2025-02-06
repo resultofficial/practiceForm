@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static tests.TestData.*;
 
-@Tag("anketa")
+
 public class Formated extends BaseTest {
 
 
@@ -21,6 +21,7 @@ public class Formated extends BaseTest {
 //    Faker faker = new Faker(new Locale("ru"));
 
     @Test
+    @Tag("anketa")
     @Feature("Форма анкеты")
     @Story("Анкета")
     @Owner("AErmolaeva")
