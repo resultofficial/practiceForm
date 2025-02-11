@@ -10,5 +10,6 @@ public class BaseTest {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";//игнорируем медленную загруз.стр
         Configuration.timeout = 5000; // default 4000
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 }
