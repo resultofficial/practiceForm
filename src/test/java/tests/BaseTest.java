@@ -8,6 +8,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 public class BaseTest {
     @BeforeAll
     static void beforeAll() {
@@ -30,6 +32,8 @@ public class BaseTest {
         Attach.browserConsoleLogs();
         Attach.pageSource();
         Attach.addVideo();
+
+        closeWebDriver();
     }
 
 }

@@ -28,6 +28,7 @@ public class Formated extends BaseTest {
     @DisplayName("Заполнение анкеты студента положительный кейс")
     void fillFormTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+        String browser = System.getProperty("browser", "chrome");
 
 //        String name = faker.name().name();
 //        String lastName = faker.name().lastName();

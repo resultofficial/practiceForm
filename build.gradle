@@ -45,5 +45,6 @@ tasks.withType(Test) {
         task simple_test(type:Test) {
             useJUnitPlatform {
                 includeTags("anketa")
+                systemProperty "browser", System.getProperty("browser", "chrome")
             }
         }
