@@ -28,7 +28,6 @@ public class Formated extends BaseTest {
     @DisplayName("Заполнение анкеты студента положительный кейс")
     void fillFormTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        System.setProperty("browser", "chrome");
         String browser = System.getProperty("browser", "chrome");
         System.out.println(browser);
 
