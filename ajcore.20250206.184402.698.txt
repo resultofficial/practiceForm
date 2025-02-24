@@ -1,0 +1,131 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.22.1 built on Friday May 10, 2024 at 23:23:16 PDT
+---- Dump Properties ---
+Dump file: ajcore.20250206.184402.698.txt
+Dump reason: org.aspectj.weaver.BCException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.weaver.BCException: Error processing class file
+when weaving type Page.components.CalendarComponent
+when weaving classes 
+when weaving 
+
+	at org.aspectj.weaver.bcel.LazyClassGen.getJavaClassBytesIncludingReweavable(LazyClassGen.java:769)
+	at org.aspectj.weaver.bcel.BcelWeaver.getClassFilesFor(BcelWeaver.java:1456)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1418)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1189)
+	at org.aspectj.weaver.tools.WeavingAdaptor.getWovenBytes(WeavingAdaptor.java:574)
+	at org.aspectj.weaver.tools.WeavingAdaptor.weaveClass(WeavingAdaptor.java:398)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:122)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:51)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:242)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:578)
+	at java.base/java.lang.Class.forName(Class.java:557)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.loadClass(JUnitPlatformTestClassProcessor.java:173)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.access$100(JUnitPlatformTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.execute(JUnitPlatformTestClassProcessor.java:109)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.execute(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 67
+	at aj.org.objectweb.asm.ClassReader.<init>(ClassReader.java:200)
+	at aj.org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+	at aj.org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.aspectj.weaver.bcel.asm.StackMapAdder.addStackMaps(StackMapAdder.java:42)
+	at org.aspectj.weaver.bcel.LazyClassGen.getJavaClassBytesIncludingReweavable(LazyClassGen.java:771)
+	... 44 more
+---- System Properties ---
+java.specification.version=23
+sun.jnu.encoding=UTF-8
+org.gradle.test.worker=1
+java.class.path=/Users/anastasiaermolaeva/.gradle/caches/8.12.1/workerMain/gradle-worker.jar:/Users/anastasiaermolaeva/IdeaProjects/practiceForm/build/classes/java/test:/Users/anastasiaermolaeva/IdeaProjects/practiceForm/build/resources/test:/Users/anastasiaermolaeva/IdeaProjects/practiceForm/build/classes/java/main:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide/7.3.2/8ae27afd73d44ee0dbebf5c1400ec3acb1c2a73b/selenide-7.3.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.github.javafaker/javafaker/1.0.2/be0ff271b1208416822db4438864df47f90af92f/javafaker-1.0.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.3/4852f4e4af9074d9214213b199751f99efeab8b9/junit-jupiter-params-5.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.3/48c14e866bb1a87ca35d24ff068463bb202ada24/junit-jupiter-engine-5.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit5/2.29.1/4d1c4b89009eb6d035e4ecc8c1a85a3e196dbfa2/allure-junit5-2.29.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-junit-platform/2.29.1/9a459c871098e583de0085b3ef077c2c7d5e50bf/allure-junit-platform-2.29.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.3/a22aa91d1d6c69b2020a9aeb6d095ea81132bfa5/junit-jupiter-api-5.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.3/2e07e6389624f3e93fb2e87aec2fdc30cc84b069/junit-platform-launcher-1.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.3/365a320c3cfd47f3346625e541e424e35dc75c42/junit-platform-engine-1.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.3/a353d42a2f13343a7cb80c5228ae66ff64495481/junit-platform-commons-1.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.3/6686d8fbf251f9bf8ecba413cab57b9e00f9134d/junit-jupiter-5.10.3.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/2.0.7/bfa4d4dad645a5b11c022ae0043bac2df6cf16b5/slf4j-simple-2.0.7.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-selenide/2.29.1/b3dd3df38ffb69e9f5f637b934551aaaf03a8d7e/allure-selenide-2.29.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide-core/7.3.2/591a9d816444464dbcb3b19d334344d12a97b1e5/selenide-core-7.3.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/4.21.0/2cc38c8dbef9d6e8774f05c2d2e8088180858ed4/selenium-java-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/4.21.0/bbd1b1defdf733cfc6bcf7eb8f04ef6752dfaf12/selenium-chrome-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-devtools-v123/4.21.0/6ba3119793824efc0819cc648a56251ea2a4c886/selenium-devtools-v123-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-devtools-v124/4.21.0/b29f46d95d8ddec0bf97343a0124dd47e3cbf14/selenium-devtools-v124-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-devtools-v125/4.21.0/e4972154992319d39384bb85e69264ee6312cec0/selenium-devtools-v125-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/4.21.0/a8e4723fbfb9a7592f11fb6b378b516805739eda/selenium-firefox-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-devtools-v85/4.21.0/c7c4f2166933c72e7b2f8e855ac4b6875521bd2e/selenium-devtools-v85-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/4.21.0/97d8d034f1f08ab049920c413f2c12abb50fe4a5/selenium-edge-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/4.21.0/c3499216bb107a4a45adbed8e3426de3a9773fe6/selenium-ie-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-safari-driver/4.21.0/b6fb9a251cea14893a9215b788b7deaf3a122966/selenium-safari-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/4.21.0/b9b551bfeeea1a76a2e66735412e49db776b567/selenium-support-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chromium-driver/4.21.0/e40ba3d6f4603a82d4f827ff7b764218876bdcf5/selenium-chromium-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/4.21.0/8d6821792ddc0bf519208ac6d6c9e43cf7b15570/selenium-remote-driver-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/33.2.0-jre/e264781dadc4967e5292f3c4d05f1d153631f7b4/guava-33.2.0-jre.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.14.0/1ed471194b02f2c6cb734a0cd6f6f107c673afae/commons-lang3-3.14.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.16.1/377d592e740dc77124e0901291dbfaa6810a200e/commons-io-2.16.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-test-filter/2.29.1/80ee4d0e8a458be89feff62cc527c88301bdf6d5/allure-test-filter-2.29.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-java-commons/2.29.1/e890caace3c0eb81bff0b4bb87f3e91071df305/allure-java-commons-2.29.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.client5/httpclient5/5.3.1/56b53c8f4bcdaada801d311cf2ff8a24d6d96883/httpclient5-5.3.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.13/80229737f704b121a318bba5d5deacbcf395bc77/slf4j-api-2.0.13.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.23/e8520d52edca3d8dc0f366cff520fb4498ec8a5f/snakeyaml-1.23-android.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.github.mifmif/generex/1.0.2/b378f873b4e8d7616c3d920e2132cb1c87679600/generex-1.0.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.2/c4a06a64e650562f30b7bf9aaec1bfed43aca12b/failureaccess-1.0.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.42.0/638ec33f363a94d41a4f03c3e7d3dcfba64e402d/checker-qual-3.42.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.26.1/c1fde57694bdc14e8618899aaa6e857d9465d7de/error_prone_annotations-2.26.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-manager/4.21.0/a77a7b8c29010b783d79fcf2409c80da81147cc0/selenium-manager-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-http/4.21.0/f64a5b9eb611e1b8d993720bf4df660ce1968a3b/selenium-http-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-json/4.21.0/a6702380e592496b41d5a88e185c04e3205a4048/selenium-json-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-os/4.21.0/dc1d5660dd9dcd08c89288da6ee588261bfa3090/selenium-os-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/4.21.0/60b6b8d97e21a9a3188c67e1d8f4cb0b909ccc09/selenium-api-4.21.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/dk.brics.automaton/automaton/1.11-8/6ebfa65eb431ff4b715a23be7a750cbc4cc96d0f/automaton-1.11-8.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-model/2.29.1/10c52451031c77eb6eaf8562a45ad3ea1b556a70/allure-model-2.29.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service-annotations/1.1.1/da12a15cd058ba90a0ff55357fb521161af4736d/auto-service-annotations-1.1.1.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry.semconv/opentelemetry-semconv/1.25.0-alpha/76b3d4ca0a8f20b27c1590ceece54f0c7fb5857e/opentelemetry-semconv-1.25.0-alpha.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-exporter-logging/1.38.0/e28b27276a725d97cef15c0f1fd717135a5b6efc/opentelemetry-exporter-logging-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.38.0/faa69faa5d6b46c915bd0fe715ba0e8ff5417372/opentelemetry-sdk-extension-autoconfigure-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.38.0/24afdf3c2993981f99409879f075c67a10acd113/opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk/1.38.0/e4e1b5c43b3126f571707c9d67ffc78c58d4d9e/opentelemetry-sdk-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk-trace/1.38.0/e6dbbba0046e0f9b1ee71fc3f48d32f9d0dd11a5/opentelemetry-sdk-trace-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk-metrics/1.38.0/3f7b54be027e4f1186d50a8db3edacf8c948f89c/opentelemetry-sdk-metrics-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk-logs/1.38.0/2c6e8b6598665dc6e7654cf35e1bdbd7f6c33016/opentelemetry-sdk-logs-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-sdk-common/1.38.0/20a83769d333809e307526aad52f814037fdb1a7/opentelemetry-sdk-common-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-api-incubator/1.38.0-alpha/27a5bf8657cf41181c3fd6768f1e86468a73ed9c/opentelemetry-api-incubator-1.38.0-alpha.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-api/1.38.0/f3e97c5e57a6d113cc54c5c8a1474c43cec0173/opentelemetry-api-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/io.opentelemetry/opentelemetry-context/1.38.0/b87f29fc830776394c3167ccdb82d8baa9f60d5d/opentelemetry-context-1.38.0.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.14.15/11c9440bc7f9468761e5a82778a05205169d49a9/byte-buddy-1.14.15.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5-h2/5.2.4/2872764df7b4857549e2880dd32a6f9009166289/httpcore5-h2-5.2.4.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.2.4/34d8332b975f9e9a8298efe4c883ec43d45b7059/httpcore5-5.2.4.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/dev.failsafe/failsafe/3.3.2/738a986f1f0e4b6c6a49d351dddc772d1378c5a8/failsafe-3.3.2.jar:/Users/anastasiaermolaeva/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.4.0/e9061b21958bfaf1cb736eb22e36cbf02d8fe9f/commons-exec-1.4.0.jar
+java.vm.vendor=Homebrew
+sun.arch.data.model=64
+user.variant=
+java.vendor.url=https://github.com/Homebrew/homebrew-core/issues
+user.timezone=Asia/Bangkok
+java.vm.specification.version=23
+os.name=Mac OS X
+user.country=RU
+sun.java.launcher=SUN_STANDARD
+sun.boot.library.path=/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib
+sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1'
+http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+jdk.debug=release
+allure.results.directory=/Users/anastasiaermolaeva/IdeaProjects/practiceForm/build/allure-results
+sun.cpu.endian=little
+user.home=/Users/anastasiaermolaeva
+user.language=ru
+java.specification.vendor=Oracle Corporation
+java.version.date=2025-01-21
+java.home=/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home
+file.separator=/
+java.vm.compressedOopsMode=Zero based
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+java.specification.name=Java Platform API Specification
+apple.awt.application.name=GradleWorkerMain
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+java.runtime.version=23.0.2
+user.name=anastasiaermolaeva
+stdout.encoding=UTF-8
+path.separator=:
+os.version=15.0
+java.runtime.name=OpenJDK Runtime Environment
+file.encoding=UTF-8
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vendor.version=Homebrew
+java.vendor.url.bug=https://github.com/Homebrew/homebrew-core/issues
+java.io.tmpdir=/var/folders/d0/fhkcjm_917d91_5cv3phsc0r0000gn/T/
+java.version=23.0.2
+user.dir=/Users/anastasiaermolaeva/IdeaProjects/practiceForm
+os.arch=aarch64
+java.vm.specification.name=Java Virtual Machine Specification
+org.gradle.internal.worker.tmpdir=/Users/anastasiaermolaeva/IdeaProjects/practiceForm/build/tmp/simple_test/work
+native.encoding=UTF-8
+java.library.path=/Users/anastasiaermolaeva/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+junit.jupiter.extensions.autodetection.enabled=true
+java.vm.info=mixed mode, sharing
+stderr.encoding=UTF-8
+java.vendor=Homebrew
+java.vm.version=23.0.2
+sun.io.unicode.encoding=UnicodeBig
+socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+java.class.version=67.0
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty
